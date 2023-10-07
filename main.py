@@ -34,14 +34,14 @@ class BugVision:
         
         # Print the source code of the function
         try:
-            source_code = inspect.getsource(func)
+            module_source_code = inspect.getsource(func)
         except:
-            source_code = ""
+            module_source_code = ""
 
         error_context = {
             "error_message": error_message,
             "module_name": module_name,
-            "source_code": source_code
+            "module_source_code": module_source_code
         }
         for k, v in error_context.items():
             print(f"{k}: {v}")
